@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>PresentationAI</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="app">
+    <header class="topbar">
+      <div class="brand"><div class="logo">✦</div><div><h1>PresentationAI</h1><p>AI Presentation Assistant</p></div></div>
+      <div class="status"><span></span> AI Assistant</div>
+    </header>
+
+    <section class="chat-shell">
+      <div id="chat" class="chat">
+        <div class="welcome">
+          <div class="welcome-icon">✦</div>
+          <h2>What are we presenting today?</h2>
+          <p>Create, improve, analyze or practice a presentation. Just tell me what you need in your own words.</p>
+          <div class="examples">
+            <button data-prompt="Create a 7-slide presentation on Generative AI for 3rd-year CSE students.">Create a presentation</button>
+            <button data-prompt="Give me speaker notes for a presentation on Cloud Computing.">Speaker notes</button>
+            <button data-prompt="Analyze this presentation content and suggest improvements:">Analyze content</button>
+            <button data-prompt="Give me likely teacher questions for a presentation on Artificial Intelligence and start a practice session.">Practice Q&A</button>
+          </div>
+        </div>
+      </div>
+
+      <form id="chat-form" class="composer">
+        <textarea id="message" rows="1" placeholder="Tell me what you want to create or improve..."></textarea>
+        <button id="send" type="submit">➤</button>
+      </form>
+      <p class="hint">Create • Improve • Analyze • Practice</p>
+    </section>
+  </main>
+  <script src="script.js"></script>
+</body>
+</html>
