@@ -3,37 +3,94 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>PresentationAI</title>
+  <meta name="theme-color" content="#f4eee4">
+  <title>PresentationAI — Your AI Presentation Companion</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
+  <div class="page-noise" aria-hidden="true"></div>
   <main class="app">
     <header class="topbar">
-      <div class="brand"><div class="logo">✦</div><div><h1>PresentationAI</h1><p>AI Presentation Assistant</p></div></div>
-      <div class="status"><span></span> AI Assistant</div>
+      <a class="brand" href="#" aria-label="PresentationAI home">
+        <span class="brand-mark"><span></span><span></span><span></span></span>
+        <span class="brand-name">PresentationAI</span>
+      </a>
+      <nav class="nav-links" aria-label="Main navigation">
+        <a href="#chat">Assistant</a>
+        <a href="#features">Features</a>
+        <a href="#about">About</a>
+      </nav>
+      <div class="top-actions">
+        <span class="status"><i></i> AI online</span>
+        <button class="menu-btn" type="button" aria-label="Open menu">☰</button>
+      </div>
     </header>
 
-    <section class="chat-shell">
-      <div id="chat" class="chat">
-        <div class="welcome">
-          <div class="welcome-icon">✦</div>
-          <h2>What are we presenting today?</h2>
-          <p>Create, improve, analyze or practice a presentation. Just tell me what you need in your own words.</p>
-          <div class="examples">
-            <button data-prompt="Create a 7-slide presentation on Generative AI for 3rd-year CSE students.">Create a presentation</button>
-            <button data-prompt="Give me speaker notes for a presentation on Cloud Computing.">Speaker notes</button>
-            <button data-prompt="Analyze this presentation content and suggest improvements:">Analyze content</button>
-            <button data-prompt="Give me likely teacher questions for a presentation on Artificial Intelligence and start a practice session.">Practice Q&A</button>
-          </div>
+    <section class="hero" id="about">
+      <div class="hero-copy">
+        <div class="eyebrow"><span>✦</span> YOUR CONVERSATIONAL AI ASSISTANT</div>
+        <h1>Meet <em>PresentationAI</em>:<br>Your presentation companion.</h1>
+        <p>Plan your slides, sharpen your ideas, prepare speaker notes and practice your delivery — all in one friendly conversation.</p>
+        <div class="hero-pills">
+          <span>CREATE</span><span>IMPROVE</span><span>ANALYZE</span><span>PRACTICE</span>
         </div>
       </div>
-
-      <form id="chat-form" class="composer">
-        <textarea id="message" rows="1" placeholder="Tell me what you want to create or improve..."></textarea>
-        <button id="send" type="submit">➤</button>
-      </form>
-      <p class="hint">Create • Improve • Analyze • Practice</p>
+      <div class="hero-art" aria-hidden="true">
+        <div class="speech speech-one">Let's make it clear!</div>
+        <div class="doodle-person person-left"><span class="head"></span><span class="body"></span><span class="arm"></span></div>
+        <div class="laptop"><div class="screen"><span>PresentationAI</span><b>Ideas → Slides</b><i></i><i></i><i></i></div><div class="base"></div></div>
+        <div class="doodle-person person-right"><span class="head"></span><span class="body"></span><span class="arm"></span></div>
+        <div class="speech speech-two">You got this ✦</div>
+      </div>
     </section>
+
+    <section class="workspace" id="chat">
+      <div class="workspace-head">
+        <div>
+          <p class="section-kicker">CHAT WITH YOUR ASSISTANT</p>
+          <h2>What are we presenting today?</h2>
+        </div>
+        <div class="workspace-note">No complicated forms.<br>Just tell me what you need.</div>
+      </div>
+
+      <div class="chat-card">
+        <div id="chat" class="chat">
+          <div class="welcome">
+            <div class="welcome-icon">✦</div>
+            <p>Start with an idea below, or type your own request.</p>
+            <div class="examples">
+              <button data-prompt="Create a 7-slide presentation on Generative AI for 3rd-year CSE students."><span>01</span>Create a presentation</button>
+              <button data-prompt="Give me speaker notes for a presentation on Cloud Computing."><span>02</span>Write speaker notes</button>
+              <button data-prompt="Analyze this presentation content and suggest improvements:"><span>03</span>Analyze content</button>
+              <button data-prompt="Give me likely teacher questions for a presentation on Artificial Intelligence and start a practice session."><span>04</span>Practice Q&A</button>
+            </div>
+          </div>
+        </div>
+
+        <form id="chat-form" class="composer">
+          <textarea id="message" rows="1" placeholder="Tell me what you want to create or improve..."></textarea>
+          <button id="send" type="submit" aria-label="Send message"><span>↑</span></button>
+        </form>
+        <div class="composer-footer"><span>Shift + Enter for a new line</span><span>PresentationAI can make mistakes — review important details.</span></div>
+      </div>
+    </section>
+
+    <section class="features" id="features">
+      <div class="features-heading">
+        <p class="section-kicker">FEATURES YOU CAN'T RESIST</p>
+        <h2>From blank page to <em>confident presentation.</em></h2>
+      </div>
+      <div class="feature-grid">
+        <article><div class="feature-icon">✎</div><h3>Personalized Responses</h3><p>Get slide ideas tailored to your topic, audience, duration and style.</p></article>
+        <article><div class="feature-icon">◌</div><h3>Natural Processing</h3><p>Ask in your own words. No rigid commands or complicated workflow.</p></article>
+        <article><div class="feature-icon">♡</div><h3>Practice & Feedback</h3><p>Prepare likely questions and turn nervous practice into a conversation.</p></article>
+      </div>
+    </section>
+
+    <footer id="footer">
+      <div class="footer-brand"><span class="brand-mark"><span></span><span></span><span></span></span> PresentationAI</div>
+      <p>Make your next presentation feel a little easier.</p>
+    </footer>
   </main>
   <script src="script.js"></script>
 </body>
