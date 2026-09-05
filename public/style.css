@@ -21,3 +21,58 @@ footer{border-top:1px solid var(--line);padding:26px 10px 38px;display:flex;just
 .typing{display:inline-flex;gap:5px;padding:16px 18px!important}.typing i{width:6px;height:6px;border-radius:50%;background:#777166;animation:bounce 1s infinite ease-in-out}.typing i:nth-child(2){animation-delay:.12s}.typing i:nth-child(3){animation-delay:.24s}@keyframes bounce{0%,70%,100%{transform:translateY(0);opacity:.45}35%{transform:translateY(-4px);opacity:1}}
 @media(max-width:820px){.nav-links{gap:17px}.hero{grid-template-columns:1fr;padding-top:50px}.hero-art{height:300px;max-width:620px;width:100%;margin:auto}.workspace-head{align-items:start;flex-direction:column}.workspace-note{text-align:left}.feature-grid{grid-template-columns:1fr 1fr}}
 @media(max-width:600px){.app{width:min(100% - 22px,1180px)}.topbar{height:68px}.nav-links{display:none}.menu-btn{display:block}.status{display:none}.hero{padding:42px 7px 45px}.hero h1{font-size:44px;letter-spacing:-2.4px}.hero-art{height:250px;border-radius:38% 62% 45% 55%}.laptop{transform:translate(-50%,-50%) scale(.75)}.person-left{left:1%;bottom:20px}.person-right{right:0;bottom:18px}.speech-one{top:35px;left:5%}.speech-two{right:4%;top:72px}.workspace{padding-top:30px}.workspace-head{padding:0 3px}.chat-card{border-radius:22px;padding:8px}.chat{height:500px;padding:12px 7px}.examples{grid-template-columns:1fr}.bubble{max-width:94%}.composer-footer{display:none}.feature-grid{grid-template-columns:1fr}.features{padding-left:3px;padding-right:3px}footer{align-items:flex-start;flex-direction:column;gap:8px}}
+
+
+.download-ppt{
+    margin-top:10px;
+    border:1px solid rgba(47,42,37,.18);
+    background:#fffaf2;
+    color:#2f2a25;
+    border-radius:999px;
+    padding:9px 14px;
+    font:600 13px/1 inherit;
+    cursor:pointer;
+    transition:transform .15s ease, box-shadow .15s ease;
+}
+.download-ppt:hover{transform:translateY(-1px);box-shadow:0 5px 16px rgba(47,42,37,.10)}
+.download-ppt:disabled{opacity:.65;cursor:wait}
+
+
+/* ===== Chat transcript fixes ===== */
+#chat-messages{
+  position:relative;
+}
+
+/* User prompt: dark readable bubble inside the main white chat area */
+#chat-messages .message-row.user .bubble{
+  background:#25231f !important;
+  color:#fffdf8 !important;
+  border:1px solid #25231f !important;
+  border-bottom-right-radius:5px;
+}
+
+/* AI reply: light readable bubble inside the main white chat area */
+#chat-messages .message-row.ai .bubble{
+  background:#f0ebe2 !important;
+  color:#2e2b26 !important;
+  border:1px solid #d8d0c2 !important;
+  border-bottom-left-radius:5px;
+}
+
+/* Keep the download action visually attached to the AI response */
+#chat-messages .message-row.ai .download-ppt{
+  display:block;
+  width:max-content;
+  margin:14px 0 2px;
+  background:#25231f;
+  color:#fffdf8;
+  border:1px solid #25231f;
+  border-radius:12px;
+  padding:10px 14px;
+  font-weight:600;
+}
+
+#chat-messages .message-row.ai .download-ppt:hover{
+  transform:translateY(-1px);
+  box-shadow:0 5px 16px rgba(47,42,37,.12);
+}
